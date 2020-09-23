@@ -19,18 +19,20 @@ const Job = (props) => {
   };
   return (
     <>
-      <h3>Search for jobs near you</h3>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter your location"
-          value={search}
-          onChange={onChange}
-        />
-        <button onClick={getJobs} type="submit">
-          Find Me a Job!
-        </button>
-      </form>
+      <div className="form">
+        <h2>Search for jobs near you</h2>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter your location"
+            value={search}
+            onChange={onChange}
+          />
+          <button onClick={getJobs} type="submit">
+            Find Me a Job!
+          </button>
+        </form>
+      </div>
       {props.jobs.map((job) => (
         <JobCard key={job.id} job={job} />
       ))}

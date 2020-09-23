@@ -4,26 +4,36 @@ const JobCard = (props) => {
   console.log("props from JobCard", props);
   function stripHTML(text) {
     const cleanText = text.replace(/<.*?>/gm, "");
-    // truncatedtext= truncatefunction(cleantext)
-    return cleanText;
+
+    const truncatedText = truncateText(cleanText, 250);
+    return truncatedText;
   }
   // truncate function
   // return truncatedtext
+  function truncateText(str, num) {
+    if (str.length > num) {
+      return str.slice(0, num) + "...";
+    } else {
+      return str;
+    }
+  }
 
   return (
     <div className="jobResults">
       <p>Job type: {props.job.type}</p>
-      <div className="companyInfo">
-        <p>Company: {props.job.company}</p>
-        <img src={props.job.company_logo} alt="company name here + logo" />
-      </div>
+
+      <p>Company: {props.job.company}</p>
+
       <p>Location: {props.job.location}</p>
       <p>Title: {props.job.title}</p>
-      <p>Description: {stripHTML(props.job.description)}</p>
+      <p className="description">
+        Description: {stripHTML(props.job.description)}
+      </p>
       <p>Posted: {props.job.created_at}</p>
-      <p>Company url: {props.job.company_url}</p>
 
-      <a href={props.job.url}>Click for Job Posting</a>
+      <a href={props.job.company_url}>Visit Company Site</a>
+
+      <a href={props.job.url}>See Full Job Posting</a>
     </div>
   );
 };
