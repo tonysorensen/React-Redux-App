@@ -33,9 +33,17 @@ const Job = (props) => {
           </button>
         </form>
       </div>
-      {props.jobs.map((job) => (
-        <JobCard key={job.id} job={job} />
-      ))}
+      {props.isFetching ? (
+        <div>**Finding jobs**</div>
+      ) : props.error ? (
+        <div>{props.error}</div>
+      ) : (
+        <>
+          {props.jobs.map((job) => (
+            <JobCard key={job.id} job={job} />
+          ))}
+        </>
+      )}
     </>
   );
 };
@@ -43,6 +51,7 @@ const Job = (props) => {
 const mapStateToProps = (state) => ({
   jobs: state.jobs,
   error: state.error,
+  isFetching: state.isFetching,
 });
 
 export default connect(mapStateToProps, { fetchData })(Job);

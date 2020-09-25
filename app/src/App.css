@@ -30,6 +30,7 @@ body {
   width: 100%;
   background-color: #e6f4f1;
   padding-bottom: 20px;
+  margin-bottom: 40px;
 }
 h2 {
   color: #4f6d8a;
@@ -68,4 +69,8 @@ a {
 
 .description {
   width: 50%;
+}
+
+.findingJobs .error {
+  font-size: 40px;
 }

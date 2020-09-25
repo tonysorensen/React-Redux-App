@@ -8,21 +8,6 @@ const initialState = {
   jobs: [],
   error: "",
   isFetching: false,
-
-  //   {
-  //     type: "",
-  //     company: "",
-  //     location: "",
-  //     title: "",
-  //     description: "",
-  //     apply: "",
-  //     posted: "",
-  //     companyUrl: "",
-  //     postingUrl: "",
-  //     companyLogo: "",
-  //     error: "",
-  //     isFetching: false,
-  //   },
 };
 
 function reducer(state = initialState, action) {
