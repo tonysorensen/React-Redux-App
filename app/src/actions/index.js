@@ -1,9 +1,9 @@
 
 import axios from "axios";
 
-export const FETCH_TEAM_START = "FETCH_Team_START";
-export const FETCH_TEAM_SUCCESS = "FETCH_Team_SUCCESS";
-export const FETCH_TEAM_FAIL = "FETCH_Team_FAIL";
+export const FETCH_TEAM_START = "FETCH_TEAM_START";
+export const FETCH_TEAM_SUCCESS = "FETCH_TEAM_SUCCESS";
+export const FETCH_TEAM_FAIL = "FETCH_TEAM_FAIL";
 
 export const getTeam = () => (dispatch) => {
   dispatch({ type: FETCH_TEAM_START });

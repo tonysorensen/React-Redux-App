@@ -30,7 +30,8 @@ function reducer(state = initialState, action) {
     case FETCH_TEAM_FAIL:
       return {
         ...state,
-        error: action.payload,
+        error: action.payload.message,
+        isFetching: false,
       };
     default:
       return state;

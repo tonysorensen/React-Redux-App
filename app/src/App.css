@@ -20,7 +20,7 @@ html{
    margin:0 auto;
  }
  img{
-   width: 220px;
+   height: 220px;
    margin-top: 25px;
  }
  button{
@@ -42,8 +42,8 @@ html{
   background-color: #9F7B89;
   display: flex;
   flex-direction: row;
-  height: 400px;
-  width: 90%;
+  height: 30%;
+  width: 100%;
   justify-content: space-around;
 }
 .teamMember{
@@ -51,11 +51,15 @@ html{
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  padding-bottom:2%;
 }
 .fetching{
   margin-bottom: 50px;
   font-size: 2.5em;
   color:blue;
 }
-
+.error{
+  font-size: 2.5em;
+  color:red;
+}
 
