@@ -10,25 +10,24 @@ const TeamList = (props) => {
   };
 
   return (
-    <>
-      <h2>Meet Our Team</h2>
-      {props.isFetching && <p>Fetching the team!</p>}
-      <div>
+    <container className="teamList">
+      <h1>Meet Our Team</h1>
+      <button onClick={fetchTeam}>Fetch Team!</button>
+      {props.isFetching && <p className="fetching">Fetching the team!</p>}
+      <div className="team">
         {props.team.map((team) => (
-          <container className="team">
+          <div className="teamMember">
           <img src={team.avatar} alt="avatar"/>
          <div className="name">
-            <h4 key={team.id}>{team.first_name}</h4>
-            <h4 key={team.id}>{team.last_name}</h4>
+            <h4 key={team.id}>{team.first_name} {team.last_name}</h4>
          </div>
           <p>{team.email}</p>
-          </container>
+          </div>
        
         ))}
       </div>
       {props.error && <p className="error">{props.error}</p>}
-      <button onClick={fetchTeam}>Fetch Team!</button>
-    </>
+    </container>
   );
 };
 
