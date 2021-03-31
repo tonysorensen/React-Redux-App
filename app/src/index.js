@@ -10,8 +10,7 @@ import reducer from "./reducers";
 import { createLogger } from "redux-logger";
 
 const logger = createLogger();
-const initialState={};
-const store = createStore(reducer, initialState, applyMiddleware(thunk,logger))
+const store = createStore(reducer, applyMiddleware(thunk,logger))
 
 
 

@@ -1,10 +1,11 @@
 import './App.css';
-import Holiday from './components/Holiday';
+// import Holiday from './components/Holiday';
+import PokemonList from './components/PokemonList';
 
 function App() {
   return (
     <div className="App">
-   <Holiday/> 
+    <PokemonList/>
     </div>
   );
 }
